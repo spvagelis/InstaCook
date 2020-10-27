@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,110 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="InstaCook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lzk-r3-dWR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InstaCook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8Y-lJ-fbM">
+                                        <rect key="frame" x="130.5" y="50" width="153.5" height="44"/>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZX-Iu-liU">
+                                        <rect key="frame" x="366" y="87" width="40" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="F87-oC-gLu"/>
+                                            <constraint firstAttribute="width" constant="40" id="rxV-7I-PFV"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="camera" catalog="system"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="AZX-Iu-liU" secondAttribute="bottom" constant="8" id="1Pm-bG-Kda"/>
+                                    <constraint firstItem="U8Y-lJ-fbM" firstAttribute="centerX" secondItem="Lzk-r3-dWR" secondAttribute="centerX" id="3ru-S8-mFC"/>
+                                    <constraint firstItem="U8Y-lJ-fbM" firstAttribute="top" secondItem="Lzk-r3-dWR" secondAttribute="top" constant="50" id="8pB-rJ-stL"/>
+                                    <constraint firstAttribute="height" constant="125" id="jN1-me-TjL"/>
+                                    <constraint firstAttribute="trailing" secondItem="AZX-Iu-liU" secondAttribute="trailing" constant="8" id="uIW-k7-YEm"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QgW-u5-sjd">
+                                <rect key="frame" x="0.0" y="125" width="414" height="771"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="100" id="qeg-vv-wDF">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qeg-vv-wDF" id="CgY-fG-gxr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCo-tu-msC">
+                                                    <rect key="frame" x="112" y="11" width="282" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="EHi-Sy-pJa"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Bhv-zk-vJc">
+                                                    <rect key="frame" x="112" y="39" width="282" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hamburger" translatesAutoresizingMaskIntoConstraints="NO" id="poJ-N8-9Fx">
+                                                    <rect key="frame" x="20" y="11" width="84" height="78"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="84" id="8nV-wZ-oen"/>
+                                                        <constraint firstAttribute="width" constant="84" id="9iR-fo-dQe"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="poJ-N8-9Fx" firstAttribute="leading" secondItem="CgY-fG-gxr" secondAttribute="leadingMargin" id="5vW-2r-P3b"/>
+                                                <constraint firstItem="Bhv-zk-vJc" firstAttribute="trailing" secondItem="CgY-fG-gxr" secondAttribute="trailingMargin" id="8zQ-fo-qeB"/>
+                                                <constraint firstItem="Bhv-zk-vJc" firstAttribute="leading" secondItem="poJ-N8-9Fx" secondAttribute="trailing" constant="8" id="KV6-MQ-nVV"/>
+                                                <constraint firstItem="NCo-tu-msC" firstAttribute="leading" secondItem="poJ-N8-9Fx" secondAttribute="trailing" constant="8" id="YWJ-iy-kte"/>
+                                                <constraint firstItem="NCo-tu-msC" firstAttribute="trailing" secondItem="CgY-fG-gxr" secondAttribute="trailingMargin" id="Z9I-ZB-KtV"/>
+                                                <constraint firstItem="NCo-tu-msC" firstAttribute="top" secondItem="CgY-fG-gxr" secondAttribute="topMargin" id="bcx-Fj-9kN"/>
+                                                <constraint firstItem="poJ-N8-9Fx" firstAttribute="top" secondItem="CgY-fG-gxr" secondAttribute="topMargin" id="dmJ-MW-s7U"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="poJ-N8-9Fx" secondAttribute="bottom" id="u5Y-hs-spj"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Bhv-zk-vJc" secondAttribute="bottom" id="uTe-kR-bvW"/>
+                                                <constraint firstItem="Bhv-zk-vJc" firstAttribute="top" secondItem="NCo-tu-msC" secondAttribute="bottom" constant="8" id="xUf-bP-lZe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QgW-u5-sjd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SKw-CT-8cl"/>
+                            <constraint firstItem="QgW-u5-sjd" firstAttribute="top" secondItem="Lzk-r3-dWR" secondAttribute="bottom" id="VSw-Ut-U5Z"/>
+                            <constraint firstAttribute="bottom" secondItem="QgW-u5-sjd" secondAttribute="bottom" id="iIu-vb-5qS"/>
+                            <constraint firstItem="Lzk-r3-dWR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qHu-PT-uSs"/>
+                            <constraint firstItem="QgW-u5-sjd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ryZ-ww-EZU"/>
+                            <constraint firstItem="Lzk-r3-dWR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="w6o-Jc-ZLo"/>
+                            <constraint firstItem="Lzk-r3-dWR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xrD-32-FfG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Hamburger" width="773" height="437"/>
+        <image name="camera" catalog="system" width="128" height="96"/>
+    </resources>
 </document>
