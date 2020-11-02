@@ -14,6 +14,9 @@
 		0900F8502546E6290024D071 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0900F84F2546E6290024D071 /* Assets.xcassets */; };
 		0900F8532546E6290024D071 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0900F8512546E6290024D071 /* LaunchScreen.storyboard */; };
 		0900F8632546EA900024D071 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0900F8622546EA900024D071 /* Post.swift */; };
+		0900F8652548248B0024D071 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0900F8642548248B0024D071 /* PostCell.swift */; };
+		0965A2862548343300F3B21F /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965A2852548343300F3B21F /* AddPostVC.swift */; };
+		0965A289254ABEE400F3B21F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965A288254ABEE400F3B21F /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		0900F8522546E6290024D071 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0900F8542546E6290024D071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0900F8622546EA900024D071 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		0900F8642548248B0024D071 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostCell.swift; path = InstaCook/PostCell.swift; sourceTree = SOURCE_ROOT; };
+		0965A2852548343300F3B21F /* AddPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
+		0965A288254ABEE400F3B21F /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,12 @@
 		0900F8452546E6280024D071 /* InstaCook */ = {
 			isa = PBXGroup;
 			children = (
+				0965A287254ABEB900F3B21F /* Services */,
 				0900F8612546EA800024D071 /* Model */,
 				0900F8602546EA760024D071 /* View */,
 				0900F85F2546EA670024D071 /* Controller */,
 				0900F8462546E6280024D071 /* AppDelegate.swift */,
 				0900F8482546E6280024D071 /* SceneDelegate.swift */,
-				0900F84A2546E6280024D071 /* ViewController.swift */,
-				0900F84C2546E6280024D071 /* Main.storyboard */,
 				0900F84F2546E6290024D071 /* Assets.xcassets */,
 				0900F8512546E6290024D071 /* LaunchScreen.storyboard */,
 				0900F8542546E6290024D071 /* Info.plist */,
@@ -75,6 +80,8 @@
 		0900F85F2546EA670024D071 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0900F84A2546E6280024D071 /* ViewController.swift */,
+				0965A2852548343300F3B21F /* AddPostVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -82,6 +89,8 @@
 		0900F8602546EA760024D071 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0900F8642548248B0024D071 /* PostCell.swift */,
+				0900F84C2546E6280024D071 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -92,6 +101,14 @@
 				0900F8622546EA900024D071 /* Post.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0965A287254ABEB900F3B21F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0965A288254ABEE400F3B21F /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +183,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0900F84B2546E6280024D071 /* ViewController.swift in Sources */,
+				0965A289254ABEE400F3B21F /* DataService.swift in Sources */,
 				0900F8472546E6280024D071 /* AppDelegate.swift in Sources */,
 				0900F8492546E6280024D071 /* SceneDelegate.swift in Sources */,
 				0900F8632546EA900024D071 /* Post.swift in Sources */,
+				0965A2862548343300F3B21F /* AddPostVC.swift in Sources */,
+				0900F8652548248B0024D071 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
