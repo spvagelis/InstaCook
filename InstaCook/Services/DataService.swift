@@ -37,7 +37,7 @@ class DataService {
             do {
                 
                 let postsArray = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(postsData) as! [Post]
-
+            
                 _loadedPosts = postsArray
                 
             } catch {
@@ -46,6 +46,24 @@ class DataService {
         
         NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "postsLoaded"), object: nil))
 
+        }
+    }
+    
+    func updateData() {
+        
+        if let postsData = UserDefaults.standard.object(forKey: "posts") as? Data {
+            
+            do {
+                
+                let postsArray = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(postsData) as! [Post]
+            
+                print(postsArray)
+                _loadedPosts.removeAll()
+                _loadedPosts = postsArray
+                
+            } catch {
+                debugPrint(error.localizedDescription)
+            }
         }
     }
     
@@ -64,6 +82,7 @@ class DataService {
     func imageForPath(_ path: String) -> UIImage? {
         
         let fullPath = documentsPathForFileName(path)
+        
         let image = UIImage(named: fullPath)
         
         return image
@@ -78,10 +97,20 @@ class DataService {
         
     }
     
+    func deletePost(fromIndexPath indexPath: IndexPath) {
+        
+        _loadedPosts.remove(at: indexPath.row)
+        savePosts()
+        updateData()
+        
+    }
+    
     func documentsPathForFileName(_ name: String) -> String {
         
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        
         let fullPath = paths[0] as NSString
+        
         
         return fullPath.appendingPathComponent(name)
         
