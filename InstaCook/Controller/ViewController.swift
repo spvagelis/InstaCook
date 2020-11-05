@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    
+    var numberOfRow: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +63,27 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.deleteRows(at: [indexPath], with: .automatic)
             tableView.reloadData()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        numberOfRow = indexPath.row
+        performSegue(withIdentifier: "toEditPostVC", sender: self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toEditPostVC" {
+            
+            if let vc = segue.destination as? EditPostVC {
+                
+                vc.post = DataService.instance.loadedPosts[numberOfRow]
+                vc.theNumberOfRow = numberOfRow
+                
+            }
+        }
+        
     }
 }
 

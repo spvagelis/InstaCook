@@ -56,13 +56,14 @@ class DataService {
             do {
                 
                 let postsArray = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(postsData) as! [Post]
-            
-                print(postsArray)
+
                 _loadedPosts.removeAll()
                 _loadedPosts = postsArray
                 
             } catch {
+                
                 debugPrint(error.localizedDescription)
+                
             }
         }
     }
@@ -105,6 +106,16 @@ class DataService {
         
     }
     
+    func updatePost(forRow row: Int, post: Post) {
+        
+        _loadedPosts.remove(at: row)
+        _loadedPosts.insert(post, at: row)
+        savePosts()
+        //updateData()
+        loadPosts()
+        
+    }
+    
     func documentsPathForFileName(_ name: String) -> String {
         
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
@@ -115,5 +126,4 @@ class DataService {
         return fullPath.appendingPathComponent(name)
         
     }
-    
 }

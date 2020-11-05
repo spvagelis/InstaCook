@@ -17,6 +17,7 @@
 		0900F8652548248B0024D071 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0900F8642548248B0024D071 /* PostCell.swift */; };
 		0965A2862548343300F3B21F /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965A2852548343300F3B21F /* AddPostVC.swift */; };
 		0965A289254ABEE400F3B21F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0965A288254ABEE400F3B21F /* DataService.swift */; };
+		098013742552C45C009C2431 /* EditPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098013732552C45C009C2431 /* EditPostVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		0900F8642548248B0024D071 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostCell.swift; path = InstaCook/PostCell.swift; sourceTree = SOURCE_ROOT; };
 		0965A2852548343300F3B21F /* AddPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
 		0965A288254ABEE400F3B21F /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		098013732552C45C009C2431 /* EditPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPostVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				0900F84A2546E6280024D071 /* ViewController.swift */,
 				0965A2852548343300F3B21F /* AddPostVC.swift */,
+				098013732552C45C009C2431 /* EditPostVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				098013742552C45C009C2431 /* EditPostVC.swift in Sources */,
 				0900F84B2546E6280024D071 /* ViewController.swift in Sources */,
 				0965A289254ABEE400F3B21F /* DataService.swift in Sources */,
 				0900F8472546E6280024D071 /* AppDelegate.swift in Sources */,
